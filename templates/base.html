@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Título da página (Pode ser sobrescrito em páginas filhas) -->
+    <title>Meu Site - Layout Base</title>
+
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Ícones do Bootstrap (Opcional, mas muito útil) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Estilos CSS Personalizados (Caso tenha um arquivo externo: <link rel="stylesheet" href="css/style.css">) -->
+    <style>
+        /* CSS Personalizado para ajustes finos */
+        
+        /* Garante que o footer fique no final da página (Sticky Footer) */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        /* Estilização customizada da navbar */
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Estilização customizada do rodapé */
+        .footer-custom {
+            background-color: #1e293b;
+            color: #cbd5e1;
+        }
+
+        .footer-custom a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-custom a:hover {
+            color: #38bdf8;
+        }
+
+        /* Bloco para CSS específico de páginas filhas */
+        /* BLOCK_STYLES */
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+
+    <!-- ================= NAVBAR / CABEÇALHO ================= -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <i class="bi bi-box-seam-fill text-primary"></i> MeuLogo
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Serviços
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Serviço 1</a></li>
+                                <li><a class="dropdown-item" href="#">Serviço 2</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Outro serviço</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+
+                    <!-- Ações no lado direito (ex: Login/Busca) -->
+                    <div class="d-flex align-items-center gap-2">
+                        <form class="d-flex me-2" role="search">
+                            <input class="form-control form-control-sm me-1" type="search" placeholder="Buscar..." aria-label="Search">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                        <a href="#" class="btn btn-primary btn-sm">Entrar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <!-- Este bloco será substituído nas páginas que estenderem esta base -->
+    <main class="container my-4">
+        
+        <!-- Exemplo de Conteúdo Padrão / Placeholder -->
+        <!-- BLOCK_CONTENT_START -->
+        <div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+            <div class="container-fluid py-3">
+                <h1 class="display-5 fw-bold">Página Base de Exemplo</h1>
+                <p class="col-md-8 fs-4">Esta é a estrutura principal. Subsitua este conteúdo dentro da tag <code>&lt;main&gt;</code> nas suas páginas filhas.</p>
+                <button class="btn btn-primary btn-lg" type="button">Ação Principal</button>
+            </div>
+        </div>
+        <!-- BLOCK_CONTENT_END -->
+
+    </main>
+
+    <!-- ================= RODAPÉ / FOOTER ================= -->
+    <footer class="footer-custom mt-auto py-4">
+        <div class="container text-center text-md-start">
+            <div class="row gy-3">
+                <div class="col-md-6">
+                    <h5 class="text-white">Minha Empresa</h5>
+                    <p class="small mb-0">Descrição rápida da sua empresa ou aplicação. Desenvolvido com Bootstrap 5.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-white">Links Úteis</h6>
+                    <ul class="list-unstyled mb-0 small">
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-white">Redes Sociais</h6>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3 border-secondary">
+            <div class="text-center small">
+                &copy; 2026 Minha Empresa. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

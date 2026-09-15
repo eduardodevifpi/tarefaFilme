@@ -1,0 +1,40 @@
+/* Customizações globais da aplicação */
+
+/* Garante que o rodapé fique sempre na parte inferior da tela */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Estilização da Navbar e Marca */
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Efeito hover nos links do menu */
+.nav-link {
+    transition: color 0.2s ease-in-out;
+}
+
+/* Estilização dos cards de filme */
+.card-filme {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-filme:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Estilização do Rodapé */
+.footer-custom {
+    background-color: #0f172a;
+    color: #94a3b8;
+}
