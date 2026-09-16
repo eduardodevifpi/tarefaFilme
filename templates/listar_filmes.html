@@ -57,9 +57,18 @@
             <div class="card-body">
                 <h5 class="card-title">{{ filme.titulo }}</h5>
             </div>
-            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between">
-                <small class="text-muted">Ano: {{ filme.ano }}</small>
-                <small class="text-muted">ID: #{{ filme.id }}</small>
+            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center">
+                <div>
+                    <small class="text-muted">Ano: {{ filme.ano }}</small>
+                    <small class="text-muted ms-2">ID: #{{ filme.id }}</small>
+                </div>
+                <div>
+                    <a href="/buscar?id_busca={{ filme.id }}" class="btn btn-sm btn-outline-info me-1">Detalhes</a>
+                    <a href="/filmes/editar/{{ filme.id }}" class="btn btn-sm btn-primary me-1">Editar</a>
+                    <form action="/filmes/apagar/{{ filme.id }}" method="POST" style="display:inline">
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Confirma exclusão deste filme?')">Apagar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
