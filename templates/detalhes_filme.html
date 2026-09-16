@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Filme - {{ filme.titulo }}</title>
+    <!-- Vincula o arquivo CSS através da função url_for do Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detalhes.css') }}">
+</head>
+<body>
+
+    <div class="card-filme">
+        <h1>Detalhes do Filme</h1>
+
+        <ul class="detalhes">
+            <li><strong>ID:</strong> {{ filme.id }}</li>
+            <li><strong>Título:</strong> {{ filme.titulo }}</li>
+            <li><strong>Ano de Lançamento:</strong> {{ filme.ano }}</li>
+        </ul>
+
+        <a href="/filmes" class="btn-voltar">← Voltar para a lista</a>
+    </div>
+
+</body>
+</html>

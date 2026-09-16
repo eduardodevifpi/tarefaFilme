@@ -26,3 +26,16 @@ def cadastrar():
         }
         filmes.append(filme)
         return redirect('/filmes')
+
+
+def encontrarPorId():
+    id_buscado = request.args.get('id_busca')
+
+    if id_buscado:
+
+        id_int = int(id_buscado)
+        for filme in filmes:
+            if filme['id'] == id_int:
+                return render_template('detalhes_filme.html', filme=filme)
+
+
