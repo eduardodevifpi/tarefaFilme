@@ -1,0 +1,60 @@
+/* Configuração geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card central com as informações do filme */
+.card-filme {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-filme h1 {
+    margin-top: 0;
+    color: #333333;
+    font-size: 24px;
+}
+
+/* Lista de detalhes do filme */
+.detalhes {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.detalhes li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 16px;
+    color: #555555;
+}
+
+.detalhes li strong {
+    color: #222222;
+}
+
+/* Botão para voltar à página principal */
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #0056b3;
+}

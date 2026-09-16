@@ -38,3 +38,44 @@ main {
     background-color: #0f172a;
     color: #94a3b8;
 }
+
+/* Estilização do formulário (container da busca) */
+form {
+    display: flex;
+    gap: 8px; /* Espaço entre o campo e o botão */
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+/* Campo de texto/número */
+form input[type="number"] {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Efeito ao clicar/focar no campo de texto */
+form input[type="number"]:focus {
+    border-color: #007bff; /* Fica azul ao clicar */
+}
+
+/* Botão de envio */
+form button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse por cima do botão */
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
